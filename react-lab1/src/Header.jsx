@@ -4,11 +4,11 @@
 //   an <h1> that says   Number matrix
 //   a <p className="hint"> that says   Click a cell to add one.
 // A component returns one thing, so wrap the two in a fragment: <> … </>.
-export default function Header() {
+export default function Header({ step = 1 }) {
   return (
     <>
       <h1>Number matrix</h1>
-      <p className="hint">Click a cell to add one.</p>
+      <p className="hint">Click a cell to add {step === 1 ? "one" : step}.</p>
     </>
   );
 }
